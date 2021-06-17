@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 22</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: palegreen;
+            color: darkgreen;
+            text-align: center;
+        }
+
+        nav {
+            height: 40px;
+            background-color: darkgreen;
+            display: flex;
+            align-items: center;
+
+        }
+
+        ul {
+            display: flex;
+            margin-left: auto;
+            list-style: none;
+            font-weight: bold;
+        }
+
+        li {
+            padding-left: 20px;
+            padding-right: 20px;
+            border-left: 1px dashed palegreen;
+        }
+
+        a {
+            text-decoration: none;
+            color: palegreen;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        h2 {
+            color: palegreen;
+            margin-left: 10px;
+        }
+
+        .menu {
+            width: 80vw;
+            height: 85vh;
+            background-color: darkgreen;
+            margin: auto;
+            border: 20px groove palegreen;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 20px black;
+        }
+
+        img {
+            flex: 1;
+            height: 33%;
+            background-color: white;
+            padding: 10px;
+            border: 2px solid darkgreen;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 50px white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2>JustVeg.Com</h2>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Website Layout</h1>
+    </header>
+    <div class="menu">
+        <img src="https://cdn.pixabay.com/photo/2017/04/05/01/15/food-2203717__340.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2017/04/05/01/12/food-2203671__340.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2016/04/21/11/35/mushroom-1343144__340.jpg" alt="">
+    </div>
+
+</body>
+
+</html>
