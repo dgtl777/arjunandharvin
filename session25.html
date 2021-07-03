@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 25</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: orangered;
+        }
+
+        #flowers,
+        #vegetables,
+        #fruits {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        #drag {
+            width: 300px;
+        }
+
+        img {
+            background-color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Drag and Drop</h1>
+    </header>
+    <h2 id="result"></h2>
+    <div id="flowers" ondrop="drop(event)" ondragover="allowdrop(event)">
+        <h1>Flowers</h1>
+    </div><br>
+    <div id="vegetables" ondrop="drop(event)" ondragover="allowdrop(event)">
+        <h1>Vegetables</h1>
+    </div><br>
+    <div id="fruits" ondrop="drop(event)" ondragover="allowdrop(event)">
+        <h1>Fruits</h1>
+    </div><br>
+    <img id="drag" ondragstart="drag(event)" draggable="true"
+        src="https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg" alt="">
+
+</body>
+<script>
+    function allowdrop(ev) {
+        ev.preventDefault();
+    }
+    function drag(ev) {
+        ev.dataTransfer.setData("data", ev.target.id);
+    }
+    function drop(ev) {
+        ev.preventDefault();
+        if (ev.path[0].id == "flowers") {
+            document.getElementById("result").innerText =
+                "Correct";
+        }
+        else {
+            document.getElementById("result").innerText =
+                "Wrong";
+        }
+        var data = ev.dataTransfer.getData("data");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+
+</html>
